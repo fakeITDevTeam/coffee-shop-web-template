@@ -16,7 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 2000px;
+  min-height: 3000px;
 }
 
 /* Navbar */
@@ -147,17 +147,20 @@ body {
 }
 
 /* About section */
-.about {
+.about,
+.menu {
   padding: 8.5rem 7% 1.4rem;
 }
 
-.about h2 {
+.about h2,
+.menu h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span {
+.about h2 span,
+.menu h2 span {
   color: var(--primary);
 }
 
@@ -188,6 +191,44 @@ body {
   font-size: 1.3rem;
   font-weight: 100;
   line-height: 1.6;
+}
+
+/* menu section */
+.menu h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.menu .row .menu-card .mmenu-card-price {
 }
 
 /* Media queries */
@@ -248,6 +289,10 @@ body {
     font-size: 2rem;
   }
   .about .row .content p {
+    font-size: 1.6rem;
+  }
+  .menu p {
+    /* font-size: 1.2rem; */
     font-size: 1.6rem;
   }
 }
