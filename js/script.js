@@ -37,5 +37,29 @@ document.addEventListener('click', function (e) {
   if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
     shoppingCart.classList.remove('active');
   }
-  
 });
+
+// Modal box
+const itemDetailModal = document.querySelector('#item-detail-modal');
+const itemDetailButtons = document.querySelectorAll('.item-detail-button');
+
+itemDetailButtons.forEach((btn) => {
+  btn.onclick = (e) => {
+    itemDetailModal.style.display = 'flex';
+    e.preventDefault();
+  }
+});
+
+
+// Klik tombol close modal
+document.querySelector('.modal .close-icon').onclick = (e) => {
+  itemDetailModal.style.display = 'none';
+  e.preventDefault();
+}
+
+// Close modal by clicking outside the modal
+window.onclick = (e) => {
+  if (e.target === itemDetailModal) {
+    itemDetailModal.style.display = 'none';
+  }
+}
